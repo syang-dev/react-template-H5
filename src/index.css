@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color: rgb(32, 55, 93);
 }
 html,
 body {
@@ -11,4 +12,16 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
