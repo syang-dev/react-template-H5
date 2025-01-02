@@ -1,7 +1,13 @@
-import github from "./assets/github.svg";
-function App() {
+import { createLazyFileRoute } from "@tanstack/react-router";
+import github from "@/assets/github.svg";
+
+export const Route = createLazyFileRoute("/")({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   return (
-    <section className="min-h-[100vh] w-full flex flex-col relative pb-[54px]">
+    <section className="w-full flex flex-col relative pb-[54px]">
       <main className="w-[375px] p-[12px] mr-auto ml-auto h-full">
         <h1 className="font-semibold text-lg">
           <span className="animate-flash bg-flash bg-clip-text text-transparent bg-[length:200%_auto]">
@@ -28,7 +34,7 @@ function App() {
           </div>
         </p>
       </main>
-      <footer className="absolute h-[54px] right-0 left-0 bottom-0 text-[8px] bg-slate-100 overflow-hidden">
+      <footer className="fixed h-[54px] right-0 left-0 bottom-0 text-[8px] bg-slate-100 overflow-hidden">
         <div className="flex pt-[10px] pr-[10px] pl-[10px]  w-[375px] m-auto">
           <a
             className="w-[12px] h-[12px] text-[14px] shrink-0 mr-1"
@@ -55,4 +61,3 @@ function App() {
     </section>
   );
 }
-export default App;
