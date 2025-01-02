@@ -4,12 +4,11 @@ import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import px2rem from "postcss-pxtorem";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": "./src",
+      "@": "/src", // 💡注意：这里用 “/” 是一种危险的用法，请确保工作目录与该文件同级
     },
   },
   css: {

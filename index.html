@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/github.svg" />
+    <link rel="icon" type="image/svg+xml" href="/react.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Template</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script>
+    <!-- setup debugger -->
+    <script defer>
       const debug = new URLSearchParams(window.location.search).get("debug");
       if (debug) {
         const script = document.createElement("script");
