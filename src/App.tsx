@@ -1,8 +1,14 @@
+import github from "./assets/github.svg";
 function App() {
   return (
-    <section className="min-h-full h-full w-full flex flex-col relative pb-[54px]">
-      <main className="w-[375px] p-[12px] m-auto h-full">
-        <h1 className="font-semibold text-lg">Welcome to react template</h1>
+    <section className="w-full flex flex-col relative pb-[54px]">
+      <main className="w-[375px] p-[12px] mr-auto ml-auto h-full">
+        <h1 className="font-semibold text-lg">
+          <span className="animate-flash bg-flash bg-clip-text text-transparent bg-[length:200%_auto]">
+            Welcome to react template
+          </span>{" "}
+          🎉
+        </h1>
         <p className="text-[12px]">
           This template is based on vite and typescript, and it is recommended
           to use it as a starting point for your own projects.
@@ -22,14 +28,14 @@ function App() {
           </div>
         </p>
       </main>
-      <footer className="absolute h-[54px] right-0 left-0 bottom-0 text-[8px] bg-slate-100 shadow-xl shadow-black">
-        <div className="p-[10px] flex w-[375px] m-auto">
+      <footer className="fixed h-[54px] right-0 left-0 bottom-0 text-[8px] bg-slate-100 overflow-hidden">
+        <div className="flex pt-[10px] pr-[10px] pl-[10px]  w-[375px] m-auto">
           <a
             className="w-[12px] h-[12px] text-[14px] shrink-0 mr-1"
             target="_blank"
             href="https://github.com/syang-dev/react-template-H5"
           >
-            <img src="/github.svg" alt="Github" />
+            <img src={github} alt="Github" />
           </a>
           <p>
             We welcome everyone to submit issues on our{" "}
